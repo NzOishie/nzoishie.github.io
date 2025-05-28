@@ -12,29 +12,34 @@ export default function HeroSection() {
 				<div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 			</div>
 
-			<div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 pt-8 md:pt-0">
+			<div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 pt-4 md:pt-10">
 				<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8 md:mb-12">
-					<div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
-						<h1 className="text-4xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500">
-							Naz Oishie
-						</h1>
-						<h2 className="text-2xl md:text-4xl font-bold text-white">Software Engineer</h2>
-						<p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-							I craft impactful software solutions with 3+ years of experience building Electronic Design Automation tools using Python, SKILL and C++ at <a href="https://eda.sw.siemens.com/en-US/" className="text-blue-400 hover:text-blue-300 transition underline" target="_blank" rel="noopener noreferrer">Siemens</a>.
-						</p>
-						<p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
-							I actively build and lead tech communities as the Chapter Lead of <a  href="https://gdg.community.dev/gdg-saskatoon/" className="text-blue-400 hover:text-blue-300 transition">Google Developer Groups - Saskatoon</a>, 
-							mentor aspiring developers and support women in tech through <a href="https://www.womentechmakers.com/" className="text-purple-400 hover:text-purple-300 transition ">Women Techmakers</a>.
-							
-						</p>
-					</div>
-					<div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-6 md:mb-8">
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-500/10 rounded-full text-purple-400 text-xs md:text-sm">Python</span>
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-teal-500/10 rounded-full text-teal-400 text-xs md:text-sm">C++</span>
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-500/10 rounded-full text-blue-400 text-xs md:text-sm">Cadence Skill</span>
-						<span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-500/10 rounded-full text-purple-400 text-xs md:text-sm">AI</span>
-					</div>
-				</motion.div>
+    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-6 md:mb-8">
+        {/* Headshot */}
+        <div className="flex-shrink-0 flex justify-center">
+            <img
+                src="/nzoishie.jpg"
+                alt="Naz Oishie headshot"
+                className="w-28 h-28 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-400 shadow-lg"
+            />
+        </div>
+        {/* Name and Title */}
+        <div className="text-center md:text-left">
+            <h1 className="text-4xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500">
+                Naz Oishie
+            </h1>
+            <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Software Engineer</h2>
+        </div>
+    </div>
+    <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
+        I craft impactful software solutions with 3+ years of experience building Electronic Design Automation tools using Python, SKILL and C++ at <a href="https://eda.sw.siemens.com/en-US/" className="text-blue-400 hover:text-blue-300 transition underline" target="_blank" rel="noopener noreferrer">Siemens</a>.
+    </p>
+    <br />
+    <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
+        I actively build and lead tech communities as the Chapter Lead of <a  href="https://gdg.community.dev/gdg-saskatoon/" className="text-blue-400 hover:text-blue-300 transition">Google Developer Groups - Saskatoon</a>, 
+        mentor aspiring developers and support women in tech through <a href="https://www.womentechmakers.com/" className="text-purple-400 hover:text-purple-300 transition ">Women Techmakers</a>.
+    </p>
+</motion.div>
 
 				{/* Interactive System Architecture */}
 				<div className="w-full max-w-5xl mx-auto relative px-2 md:px-4">

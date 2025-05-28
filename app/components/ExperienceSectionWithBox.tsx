@@ -6,9 +6,9 @@ export default function ExperienceSection() {
     return (
         <section className="py-20 px-4 relative">
             {/* Decorative background gradient */}
-            <div className="pointer-events-none absolute inset-0 z-0">
+            {/* <div className="pointer-events-none absolute inset-0 z-0">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-40 bg-gradient-to-r from-purple-700 via-blue-700 to-teal-500 opacity-20 blur-2xl rounded-full" />
-            </div>
+            </div> */}
             <div className="max-w-4xl mx-auto relative z-10">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
