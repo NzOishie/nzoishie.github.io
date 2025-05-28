@@ -49,7 +49,7 @@ export default function HeroSection() {
 </motion.div>
 
 {/* Interactive System Architecture */}
-<div className="w-full max-w-4xl mx-auto relative px-2 md:px-4">
+<div className="w-full max-w-5xl mx-auto relative px-2 md:px-4">
     <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
