@@ -3,6 +3,7 @@
 import HeroSection from './components/HeroSection';
 import ContactSection from './components/ContactSection';
 import ExperienceSectionWithBox from './components/ExperienceSectionWithBox';
+import EducationSection from './components/EducationSection';
 import VolunteerCommunitySection from './components/VolunteerCommunitySection';
 import SpeakingHighlightsSection from './components/SpeakingHighlightsSection';
 import PersonalProjectsSection from './components/PersonalProjectsSection';
@@ -10,6 +11,7 @@ import PersonalProjectsSection from './components/PersonalProjectsSection';
 const navLinks = [
 	{ href: '#experience', label: 'Work' },
 	{ href: '#projects', label: 'Projects' },
+	{ href: '#education', label: 'Education' },
 	{ href: '#community', label: 'Community' },
 	{ href: '#speaking', label: 'Speaking' },
 	{ href: '#contact', label: 'Contact' },
@@ -35,6 +37,7 @@ export default function FullStackPortfolio() {
 			<HeroSection />
 			<ExperienceSectionWithBox />
 			<PersonalProjectsSection />
+			<EducationSection />
 			<VolunteerCommunitySection />
 			<SpeakingHighlightsSection />
 			<ContactSection />
