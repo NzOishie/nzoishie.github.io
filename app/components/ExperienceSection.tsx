@@ -18,7 +18,7 @@ export default function ExperienceSection() {
                 <div className="space-y-10">
                     {/* Siemens EDA */}
                     <div>
-                        <h3 className="text-xl font-semibold text-blue-400">Siemens EDA <span className="text-gray-400 font-normal">• Saskatoon, Canada</span></h3>
+                        <h3 className="text-xl font-semibold text-blue-400">Siemens EDA <span className="text-gray-400 font-normal">• Vancouver, Canada</span></h3>
                         <p className="text-gray-400 text-sm mb-2">May 2022 – Present</p>
                         <ul className="list-disc list-inside space-y-1 text-gray-300 text-base">
                             <li>Develop high-performance tools for Electronic Design Automation using Python and C++, focusing on parsing, simulation, and visualization of large-scale circuit design data.</li>

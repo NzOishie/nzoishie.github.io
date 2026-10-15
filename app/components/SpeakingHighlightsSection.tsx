@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function SpeakingHighlightsSection() {
     return (
-        <section className="py-20 px-4">
+        <section id="speaking" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
@@ -15,9 +15,41 @@ export default function SpeakingHighlightsSection() {
                     Speaking Highlights
                 </motion.h2>
                 <p className="text-gray-400 text-center max-w-2xl mx-auto mb-12">
-                    Here are some selected talks from my recent speaking engagements, showcasing key topics and experiences I’ve shared with diverse audiences.
+                    Selected talks on applied AI, Python, and building a career in software.
                 </p>
                 <div className="space-y-8">
+                    <motion.div
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4 }}
+                        className="bg-gray-900/40 border border-blue-900 rounded-lg p-6"
+                    >
+                        <div className="flex items-center gap-2 mb-2">
+                            <span className="text-blue-400 text-xl">🔹</span>
+                            <span className="font-semibold text-base md:text-lg text-blue-200">Level Up Your Dev Skills with AI-Assisted Coding</span>
+                        </div>
+                        <p className="text-gray-400 text-sm mb-1">Technical Talk &bull; Apr 30, 2026 &bull; Queen&apos;s University, Kingston, Ontario</p>
+                        <p className="text-gray-300 text-base">
+                            Explored how software development is shifting from rigid workflows to adaptive, intelligent systems. Covered agentic systems, multimodal models, and AI-assisted workflows, and how a developer&apos;s role is moving from writing every line to directing complex systems. Included a live demonstration.
+                        </p>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.4, delay: 0.05 }}
+                        className="bg-gray-900/40 border border-blue-900 rounded-lg p-6"
+                    >
+                        <div className="flex items-center gap-2 mb-2">
+                            <span className="text-blue-400 text-xl">🔹</span>
+                            <span className="font-semibold text-base md:text-lg text-blue-200">Code Reviews in the AI Era</span>
+                        </div>
+                        <p className="text-gray-400 text-sm mb-1">Guest Lecture &bull; Jan 16, 2026 &bull; CISC 121: Introduction to Computing Science &bull; Queen&apos;s University, Kingston, Ontario</p>
+                        <p className="text-gray-300 text-base">
+                            Guest lecture on why clean code matters, why teams review code, and how industry approaches reviews. Covered the role of AI in code reviews, what to do and what to avoid, and clean-code standards including PEP 8.
+                        </p>
+                    </motion.div>
                     {/* Talk 1 */}
                     <motion.div
                         initial={{ opacity: 0, x: -20 }}
@@ -67,23 +99,6 @@ export default function SpeakingHighlightsSection() {
                         <p className="text-gray-400 text-sm mb-1">Technical Talk & Workshop &bull; Apr 20, 2024 &bull; Ottawa, ON</p>
                         <p className="text-gray-300 text-base">
                             Covered Gemini’s capabilities in generating code from natural language, and ran hands-on sessions showing how to embed Gemini in apps. Attendees built their first AI app during the session.
-                        </p>
-                    </motion.div>
-                    {/* Talk 4 */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.4, delay: 0.15 }}
-                        className="bg-gray-900/40 border border-blue-900 rounded-lg p-6"
-                    >
-                        <div className="flex items-center gap-2 mb-2">
-                            <span className="text-blue-400 text-xl">🔹</span>
-                            <span className="font-semibold text-base md:text-lg text-blue-200">Supercharge Your Py Skills: 10 Tips for Crafting Elegant Python Code</span>
-                        </div>
-                        <p className="text-gray-400 text-sm mb-1">Technical Talk &bull; Mar 23, 2024  &bull; Mississauga, ON</p>
-                        <p className="text-gray-300 text-base">
-                            Shared professional tips and clean code practices learned through years of Python development in both academic and industry settings. Designed for developers who want to write more efficient, readable, and maintainable code.
                         </p>
                     </motion.div>
                     {/* Talk 5 */}

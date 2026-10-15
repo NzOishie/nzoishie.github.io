@@ -1,139 +1,123 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState } from 'react';
+
+const focuses = [
+	{
+		title: 'Software engineering',
+		titleClass: 'text-blue-400',
+		dotClass: 'bg-blue-500',
+		cardClass: 'hover:border-blue-500/40',
+		items: ['Python and C++ applications', 'API design and servers', 'Performance and algorithm design'],
+	},
+	{
+		title: 'Applied AI',
+		titleClass: 'text-purple-400',
+		dotClass: 'bg-purple-500',
+		cardClass: 'hover:border-purple-500/40',
+		items: ['LLM apps with the Gemini API', 'Agentic AI', 'Research in intelligent software systems'],
+	},
+	{
+		title: 'How I work',
+		titleClass: 'text-teal-400',
+		dotClass: 'bg-teal-500',
+		cardClass: 'hover:border-teal-500/40',
+		items: ['Mentoring newly hired developers at Siemens', 'Code review and knowledge sharing', 'Cross-team work with QA, UX, and DevOps'],
+	},
+];
 
 export default function HeroSection() {
-	const [selectedStack, setSelectedStack] = useState<'frontend' | 'backend' | 'devops' | null>(null);
-
 	return (
-		<section className="min-h-screen relative overflow-hidden py-24 md:py-0">
+		<section id="top" className="relative min-h-screen overflow-hidden pt-20">
 			<div className="absolute inset-0">
 				<div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 			</div>
 
-			<div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 pt-4 md:pt-10">
-				<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8 md:mb-12">
-    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 mb-6 md:mb-8">
-        {/* Headshot */}
-        <div className="flex-shrink-0 flex justify-center">
-            <img
-                src="/nzoishie.jpg"
-                alt="Naz Oishie headshot"
-                className="w-28 h-28 md:w-40 md:h-40 rounded-full object-cover border-4 border-blue-400 shadow-lg"
-            />
-        </div>
-        {/* Name and Title */}
-        <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500">
-                Naz Oishie
-            </h1>
-            <h2 className="text-2xl md:text-4xl font-bold text-white mt-2">Software Engineer</h2>
-        </div>
-    </div>
-    <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-        I craft impactful software solutions with 3+ years of experience building Electronic Design Automation tools using Python, SKILL and C++ at <a href="https://eda.sw.siemens.com/en-US/" className="text-blue-400 hover:text-blue-300 transition underline" target="_blank" rel="noopener noreferrer">Siemens</a>.
-    </p>
-    <br />
-    <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
-        I actively build and lead tech communities as the Chapter Lead of <a  href="https://gdg.community.dev/gdg-saskatoon/" className="text-blue-400 hover:text-blue-300 transition">Google Developer Groups - Saskatoon</a>, 
-        mentor aspiring developers and support women in tech through <a href="https://www.womentechmakers.com/" className="text-purple-400 hover:text-purple-300 transition ">Women Techmakers</a>.
-    </p>
-    <br />
-    <div className="flex flex-wrap justify-center gap-2 md:gap-3 ">
-        <span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-500/10 rounded-full text-purple-400 text-xs md:text-sm">Python</span>
-        <span className="px-3 md:px-4 py-1.5 md:py-2 bg-teal-500/10 rounded-full text-teal-400 text-xs md:text-sm">C++</span>
-        <span className="px-3 md:px-4 py-1.5 md:py-2 bg-blue-500/10 rounded-full text-blue-400 text-xs md:text-sm">Cadence Skill</span>
-        <span className="px-3 md:px-4 py-1.5 md:py-2 bg-purple-500/10 rounded-full text-purple-400 text-xs md:text-sm">AI</span>
-    </div>
-</motion.div>
+			<div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4 pb-16">
+				<motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8 text-center md:mb-12">
+					<div className="mb-6 flex flex-col items-center justify-center gap-6 md:mb-8 md:flex-row md:gap-10">
+						<div className="flex flex-shrink-0 justify-center">
+							<img
+								src="/nzoishie.jpg"
+								alt="Naz Oishie headshot"
+								className="h-28 w-28 rounded-full border-4 border-blue-400 object-cover shadow-lg md:h-40 md:w-40"
+							/>
+						</div>
+						<div className="text-center md:text-left">
+							<h1 className="bg-gradient-to-r from-blue-500 via-purple-500 to-teal-500 bg-clip-text text-4xl font-bold text-transparent md:text-7xl">
+								Naz Oishie
+							</h1>
+							<h2 className="mt-2 text-2xl font-bold text-white md:text-4xl">Software Engineer</h2>
+							<p className="mt-2 text-sm text-gray-400 md:text-base">She/ Her</p>
+							<p className="mt-1 text-sm text-gray-500 md:text-base">Vancouver, BC</p>
+						</div>
+					</div>
+					<p className="mx-auto max-w-2xl text-lg text-gray-400 md:text-xl">
+						I build software in Python and C++ at{' '}
+						<a
+							href="https://eda.sw.siemens.com/en-US/"
+							className="text-blue-400 underline transition hover:text-blue-300"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Siemens
+						</a>{' '}
+						for{' '}
+						<a
+							href="https://www.siemens.com/en-us/products/ic/solido/design-environment/"
+							className="text-blue-400 underline transition hover:text-blue-300"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Solido Design Environment</a>{', '}
+						with 4.5+ years creating tools that parse, process, and visualize large-scale circuit design data.
+					</p>
+					<p className="mx-auto mt-4 max-w-2xl text-base text-gray-500 md:text-lg">
+						I also work on applied AI and agentic AI, including LLM-backed apps. I founded{' '}
+						<a href="https://gdg.community.dev/gdg-saskatoon/" className="text-blue-400 transition hover:text-blue-300">
+							Google Developer Groups Saskatoon
+						</a>{' '}
+						and mentor as a{' '}
+						<a href="https://www.womentechmakers.com/" className="text-purple-400 transition hover:text-purple-300">
+							Women Techmakers
+						</a>{' '}
+						Ambassador.
+					</p>
+					<div className="mt-6 flex flex-wrap justify-center gap-2 md:gap-3">
+						<span className="rounded-full bg-purple-500/10 px-3 py-1.5 text-xs text-purple-400 md:px-4 md:py-2 md:text-sm">Python</span>
+						<span className="rounded-full bg-teal-500/10 px-3 py-1.5 text-xs text-teal-400 md:px-4 md:py-2 md:text-sm">C++</span>
+						<span className="rounded-full bg-blue-500/10 px-3 py-1.5 text-xs text-blue-400 md:px-4 md:py-2 md:text-sm">Applied AI</span>
+						<span className="rounded-full bg-purple-500/10 px-3 py-1.5 text-xs text-purple-400 md:px-4 md:py-2 md:text-sm">Systems</span>
+					</div>
+				</motion.div>
 
-{/* Interactive System Architecture */}
-<div className="w-full max-w-5xl mx-auto relative px-2 md:px-4">
-    <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3 }}
-        className="bg-gray-900/50 backdrop-blur-sm rounded-lg border border-gray-800 p-2 md:p-4"
-    >
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-4">
-            {/* Frontend Layer */}
-            <div
-                className={`p-2 md:p-3 rounded-lg transition-colors border-2 ${
-                    selectedStack === 'frontend' ? 'bg-blue-500/20 border-blue-500/50' : 'bg-gray-800/50 hover:bg-gray-800/80 border-transparent'
-                }`}
-                onMouseEnter={() => setSelectedStack('frontend')}
-                onMouseLeave={() => setSelectedStack(null)}
-            >
-                <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-blue-400">Software Development</h3>
-                <ul className="space-y-1 md:space-y-1.5 text-xs md:text-sm text-gray-400">
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-blue-500 rounded-full" />
-                        Python & C++ Application Development
-                    </li>
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-blue-500 rounded-full" />
-                        Electronic Design Automation (EDA) Tools
-                    </li>
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-blue-500 rounded-full" />
-                        Performance Optimization & Algorithm Design
-                    </li>
-                </ul>
-            </div>
-
-            {/* Backend Layer */}
-            <div
-                className={`p-2 md:p-3 rounded-lg transition-colors border-2 ${
-                    selectedStack === 'backend' ? 'bg-purple-500/20 border-purple-500/50' : 'bg-gray-800/50 hover:bg-gray-800/80 border-transparent'
-                }`}
-                onMouseEnter={() => setSelectedStack('backend')}
-                onMouseLeave={() => setSelectedStack(null)}
-            >
-                <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-purple-400">Backend & Systems</h3>
-                <ul className="space-y-1 md:space-y-1.5 text-xs md:text-sm text-gray-400">
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-purple-500 rounded-full" />
-                        Scalable Architecture & Database Systems 
-                    </li>
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-purple-500 rounded-full" />
-                        API Design & Integration
-                    </li>
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-purple-500 rounded-full" />
-                        Parsing & Processing of Large Design Files
-                    </li>
-                </ul>
-            </div>
-
-            {/* DevOps Layer */}
-            <div
-                className={`p-2 md:p-3 rounded-lg transition-colors border-2 ${
-                    selectedStack === 'devops' ? 'bg-teal-500/20 border-teal-500/50' : 'bg-gray-800/50 hover:bg-gray-800/80 border-transparent'
-                }`}
-                onMouseEnter={() => setSelectedStack('devops')}
-                onMouseLeave={() => setSelectedStack(null)}
-            >
-                <h3 className="text-base md:text-lg font-semibold mb-2 md:mb-3 text-teal-400">Mentorship & Collaboration</h3>
-                <ul className="space-y-1 md:space-y-1.5 text-xs md:text-sm text-gray-400">
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-teal-500 rounded-full" />
-                        Mentoring New Engineers
-                    </li>
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-teal-500 rounded-full" />
-                        Cross-Functional Team Collaboration
-                    </li>
-                    <li className="flex items-center gap-2">
-                        <div className="w-1 h-1 bg-teal-500 rounded-full" />
-                        Code Reviews & Knowledge Sharing
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </motion.div>
-</div>
+				<div className="relative mx-auto w-full max-w-5xl px-2 md:px-4">
+					<motion.div
+						initial={{ opacity: 0 }}
+						animate={{ opacity: 1 }}
+						transition={{ delay: 0.3 }}
+						className="rounded-lg border border-gray-800 bg-gray-900/50 p-2 backdrop-blur-sm md:p-4"
+					>
+						<div className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
+							{focuses.map((focus) => (
+								<div
+									key={focus.title}
+									className={`rounded-lg border-2 border-transparent bg-gray-800/50 p-3 transition-colors hover:bg-gray-800/80 md:p-4 ${focus.cardClass}`}
+								>
+									<h3 className={`mb-2 text-base font-semibold md:mb-3 md:text-lg ${focus.titleClass}`}>{focus.title}</h3>
+									<ul className="space-y-1.5 text-xs text-gray-400 md:text-sm">
+										{focus.items.map((item) => (
+											<li key={item} className="flex items-center gap-2">
+												<div className={`h-1 w-1 rounded-full ${focus.dotClass}`} />
+												{item}
+											</li>
+										))}
+									</ul>
+								</div>
+							))}
+						</div>
+					</motion.div>
+				</div>
 			</div>
 		</section>
 	);

@@ -2,162 +2,96 @@
 
 import { motion } from 'framer-motion';
 
+const projects = [
+	{
+		label: 'Applied AI',
+		labelClass: 'text-blue-300',
+		borderClass: 'border-blue-900',
+		title: 'AI-Powered Note-Taking App',
+		summary:
+			'A note-taking app that uses Google’s Gemini API to summarize meetings and extract action items from transcripts in real time.',
+		stack: 'Gemini API, Streamlit, Python',
+		highlight: 'Demonstrated at multiple conferences as a practical way to put an LLM inside a productivity tool.',
+	},
+	{
+		label: 'Developer tools',
+		labelClass: 'text-red-300',
+		borderClass: 'border-red-900',
+		title: 'Commit Checker',
+		summary:
+			'Detects commits that are likely to introduce bugs. A TypeScript VS Code extension flags risky commits in the editor, and a Python CLI runs the same checks in a terminal or CI pipeline.',
+		stack: 'TypeScript, Python, scikit-learn, Git · Random Forest, Decision Tree, Logistic Regression',
+		highlight: 'Surfaces commit-level risk before merge, in the editor and in automation.',
+	},
+	{
+		label: 'Research',
+		labelClass: 'text-purple-300',
+		borderClass: 'border-purple-900',
+		title: 'Author Identification of Source Code',
+		summary:
+			'Identifies individual authors inside multi-author codebases. A stacking ensemble combines deep neural networks, random forests, and support vector machines to improve authorship attribution.',
+		stack: 'Stacking ensemble, DNN, SVM, Random Forest',
+		highlight: 'Published as a research paper on machine learning for software forensics.',
+	},
+	{
+		label: 'Visualization',
+		labelClass: 'text-yellow-300',
+		borderClass: 'border-yellow-900',
+		title: 'VizProv',
+		summary:
+			'A web tool for exploring scientific workflow provenance. Interactive views let someone trace data lineage, follow execution dependencies, and inspect large workflow graphs.',
+		stack: 'Vue.js, D3.js',
+		highlight: 'Built for researchers who need to read how a scientific workflow actually ran.',
+	},
+];
+
 export default function PersonalProjectsSection() {
-    return (
-        <section className="py-24 px-4 relative">
-            {/* Decorative gradient blur background */}
-            {/* <div className="pointer-events-none absolute inset-0 z-0">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-2/3 h-32 bg-gradient-to-r from-blue-700 via-purple-700 to-teal-500 opacity-20 blur-2xl rounded-full" />
-            </div> */}
-            <div className="max-w-4xl mx-auto relative z-10">
-                <motion.h2
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="text-3xl font-bold mb-16 text-center bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-transparent drop-shadow-lg"
-                >
-                    Personal Projects
-                </motion.h2>
+	return (
+		<section id="projects" className="relative px-4 py-24">
+			<div className="relative z-10 mx-auto max-w-4xl">
+				<motion.h2
+					initial={{ opacity: 0, y: 20 }}
+					whileInView={{ opacity: 1, y: 0 }}
+					viewport={{ once: true }}
+					className="mb-4 bg-gradient-to-r from-blue-400 via-purple-400 to-teal-400 bg-clip-text text-center text-3xl font-bold text-transparent drop-shadow-lg"
+				>
+					Projects
+				</motion.h2>
+				<p className="mx-auto mb-12 max-w-2xl text-center text-gray-400">
+					Applied AI and developer tools, plus the visualization and research work behind them.
+				</p>
 
-                <div className="space-y-16">
-                    {/* AI-Powered Note-Taking App */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-gradient-to-br from-gray-900/70 via-gray-800/60 to-gray-900/70 border border-blue-900 rounded-xl shadow-lg hover:scale-[1.02] transition-all"
-                    >
-                        <div className="p-8 space-y-4">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="text-blue-400 text-2xl">💡</span>
-                                <span className="font-bold text-xl">AI-Powered Note-Taking App</span>
-                            </div>
-                            <p className="text-gray-300">
-                                Built a smart note-taking application that uses Google’s Gemini API to summarize meetings and extract action items from transcripts in real time.
-                            </p>
-                            <p className="text-sm text-blue-300">
-                                <b>Tech Stack:</b> Gemini API, Streamlit, Python (backend)
-                            </p>
-                            <p className="text-sm text-teal-300">
-                                <b>Highlight:</b> Showcased at multiple conferences to demonstrate how to integrate LLMs into productivity tools.
-                            </p>
-                        </div>
-                    </motion.div>
+				<div className="space-y-6">
+					{projects.map((project) => (
+						<motion.article
+							key={project.title}
+							initial={{ opacity: 0, y: 16 }}
+							whileInView={{ opacity: 1, y: 0 }}
+							viewport={{ once: true }}
+							className={`rounded-xl border bg-gradient-to-br from-gray-900/70 via-gray-800/60 to-gray-900/70 p-6 shadow-lg md:p-8 ${project.borderClass}`}
+						>
+							<p className={`text-xs font-medium uppercase tracking-wide ${project.labelClass}`}>{project.label}</p>
+							<h3 className="mt-2 text-xl font-bold">{project.title}</h3>
+							<p className="mt-3 text-gray-300">{project.summary}</p>
+							<p className="mt-3 text-sm text-blue-300">
+								<span className="font-semibold">Stack: </span>
+								{project.stack}
+							</p>
+							<p className="mt-1 text-sm text-teal-300">{project.highlight}</p>
+						</motion.article>
+					))}
 
-                    {/* Commit Checker: Bug-Inducing Commit Detector */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-gradient-to-br from-gray-900/70 via-gray-800/60 to-gray-900/70 border border-red-900 rounded-xl shadow-lg hover:scale-[1.02] transition-all"
-                    >
-                        <div className="p-8 space-y-4">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="text-red-400 text-2xl">🐞</span>
-                                <span className="font-bold text-xl">Commit Checker: Bug-Inducing Commit Detector</span>
-                            </div>
-                            <p className="text-gray-300">
-                                A toolset developed to detect potential bug-inducing commits in codebases using machine learning techniques. The solution includes:
-                            </p>
-                            <ul className="list-disc list-inside text-gray-400 text-sm ml-4">
-                                <li>
-                                    <b>Commit Checker – VSCode Extension:</b> A developer-friendly plugin built with TypeScript that integrates into the editor and alerts users to potentially risky commits in real time.
-                                </li>
-                                <li>
-                                    <b>Command Line Interface Tool:</b> A Python-based CLI version to allow quick checks and automation in CI/CD pipelines.
-                                </li>
-                            </ul>
-                            <p className="text-sm text-blue-300">
-                                <b>Machine Learning Models Used:</b> Random Forest, Decision Tree, Logistic Regression — trained on commit metadata and historical bug data.
-                            </p>
-                            <p className="text-sm text-blue-300">
-                                <b>Tech Stack:</b> TypeScript (VSCode Extension), Python, scikit-learn, Git
-                            </p>
-                            <p className="text-sm text-teal-300">
-                                <b>Highlight:</b> Supports proactive code review by surfacing commit-level risks before merge. Combines editor integration and automation for developer efficiency.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* VizProv: Scientific Workflow Visualization Tool */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-gradient-to-br from-gray-900/70 via-gray-800/60 to-gray-900/70 border border-yellow-900 rounded-xl shadow-lg hover:scale-[1.02] transition-all"
-                    >
-                        <div className="p-8 space-y-4">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="text-yellow-400 text-2xl">🔍</span>
-                                <span className="font-bold text-xl">VizProv: Scientific Workflow Visualization Tool</span>
-                            </div>
-                            <p className="text-gray-300">
-                                A web-based visualization framework designed to explore and analyze scientific workflow provenance data. The tool features multiple highly customizable interactive views that enable users to trace data lineage, understand execution dependencies, and analyze large workflow graphs efficiently.
-                            </p>
-                            <p className="text-sm text-blue-300">
-                                <b>Tech Stack:</b> Vue.js · D3.js
-                            </p>
-                            <p className="text-sm text-teal-300">
-                                <b>Highlight:</b> Enhanced with rich interactivity and flexibility to support research and analysis needs in scientific computing and data provenance.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* The Dog Project */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-gradient-to-br from-gray-900/70 via-gray-800/60 to-gray-900/70 border border-teal-900 rounded-xl shadow-lg hover:scale-[1.02] transition-all"
-                    >
-                        <div className="p-8 space-y-4">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="text-teal-400 text-2xl">🐶</span>
-                                <span className="font-bold text-xl">The Dog Project</span>
-                            </div>
-                            <p className="text-gray-300">
-                                A fun and educational pet project that uses The Dog API to let users explore and learn about different dog breeds. Designed as a lightweight web app to practice full-stack development concepts.
-                            </p>
-                            <p className="text-sm text-blue-300">
-                                <b>Tech Stack:</b> Flask · Bootstrap · Redis
-                            </p>
-                            <p className="text-sm text-teal-300">
-                                <b>Highlight:</b> Showcases integration of third-party APIs with a full-stack Python application and caching for optimized performance.
-                            </p>
-                        </div>
-                    </motion.div>
-
-                    {/* Author Identification of Source Code */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="bg-gradient-to-br from-gray-900/70 via-gray-800/60 to-gray-900/70 border border-purple-900 rounded-xl shadow-lg hover:scale-[1.02] transition-all"
-                    >
-                        <div className="p-8 space-y-4">
-                            <div className="flex items-center gap-2 mb-2">
-                                <span className="text-purple-400 text-2xl">✍️</span>
-                                <span className="font-bold text-xl">Author Identification of Source Code</span>
-                            </div>
-                            <p className="text-gray-300">
-                                A research project focused on identifying individual authors from source code contributions in multi-author codebases. Developed a stacking ensemble classifier combining models such as Deep Neural Networks, Random Forests, and Support Vector Machines to improve accuracy in authorship attribution.
-                            </p>
-                            <p className="text-sm text-blue-300">
-                                <b>Techniques Used:</b> Stacking Ensemble, DNN, SVM, Random Forest
-                            </p>
-                            <p className="text-sm text-blue-300">
-                                <b>Research Output:</b> Published as a research paper.{' '}
-                                <a href="#" target="_blank" rel="noopener noreferrer" className="underline hover:text-blue-200">
-                                    [link]
-                                </a>
-                            </p>
-                            <p className="text-sm text-teal-300">
-                                <b>Highlight:</b> Demonstrates advanced machine learning applied to real-world software forensics and intellectual property tracking.
-                            </p>
-                        </div>
-                    </motion.div>
-                </div>
-            </div>
-        </section>
-    );
+					<motion.div
+						initial={{ opacity: 0, y: 16 }}
+						whileInView={{ opacity: 1, y: 0 }}
+						viewport={{ once: true }}
+						className="rounded-xl border border-gray-800 bg-gray-900/40 px-6 py-4 text-sm text-gray-400"
+					>
+						<span className="font-medium text-gray-200">Also: The Dog Project. </span>
+						A small Flask and Bootstrap app for browsing dog breeds through a public API, with Redis caching.
+					</motion.div>
+				</div>
+			</div>
+		</section>
+	);
 }

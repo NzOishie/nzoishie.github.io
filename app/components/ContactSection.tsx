@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ContactSection() {
 	return (
-		<section className="py-20 px-4">
+		<section id="contact" className="py-20 px-4">
 			<div className="max-w-4xl mx-auto text-center">
 				<motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="space-y-8">
 					<h2 className="text-3xl font-bold">Let&apos;s Build Something Amazing</h2>
@@ -20,7 +20,7 @@ export default function ContactSection() {
 							/>
 							<path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
 						</svg>
-						<span>Saskatoon, SK</span>
+						<span>Vancouver, BC</span>
 					</div>
 
 					{/* Contact Buttons */}
@@ -94,7 +94,7 @@ export default function ContactSection() {
 					</p>
 				</motion.div>
 				<p className="text-xs text-gray-500 mt-12 text-center">
-                    Copyright © 2025 - Naz Zarreen Oishie
+                    Copyright © 2026 - Naz Zarreen Oishie
                 </p>
 			</div>
 		</section>

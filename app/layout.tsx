@@ -15,30 +15,30 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
 	title: 'Naz Oishie - Software Engineer',
 	description:
-		'Welcome to my portfolio! I am a passionate software engineer with 3+ years of experience building Electronic Design Automation tools using Python, SKILL, and C++ at Siemens. Explore my projects and contributions to the tech community.',
+		'Software engineer with 4.5+ years on Siemens Solido Design Environment: netlisting, data visualization, an API server, and MCP servers for an agent harness.',
 	keywords: [
 		'Naz Oishie',
 		'Software Engineer',
-		'Frontend Development',
-		'Backend Development',
 		'Python',
 		'C++',
-		'Cadence',
-		'Skill',
-		'Electronic Design Automation',
+		'Applied AI',
+		'Agentic AI',
+		'Machine Learning',
 		'Siemens',
-		'Database Design',
+		'Solido Design Environment',
+		'MCP',
+		'Backend Development',
+		'Data Processing',
 		'API Development',
-		'DevOps',
-		'System Architecture',
 		'Web Development',
+		'Electronic Design Automation',
 	],
 	authors: [{ name: 'Naz Oishie' }],
 	creator: 'Naz Oishie',
 	openGraph: {
 		title: 'Naz Oishie - Software Engineer Portfolio',
 		description:
-			'Experienced Software Engineer specializing in Electronic Design Automation, building impactful tools with Python, SKILL, and C++. Explore my journey, innovative projects, and community contributions.',
+			'Software engineer with 4.5+ years on Siemens Solido Design Environment: netlisting, data visualization, an API server, and MCP servers for an agent harness.',
 		url: 'https://nzoishie.dev',
 		siteName: 'Naz Oishie - Portfolio',
 		images: [
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
 		card: 'summary_large_image',
 		title: 'Naz Oishie - Software Engineer Portfolio',
 		description:
-			' Experienced Software Engineer specializing in Electronic Design Automation, building impactful tools with Python, SKILL, and C++. Explore my journey, innovative projects, and community contributions.',
+			'Software engineer with 4.5+ years on Siemens Solido Design Environment: netlisting, data visualization, an API server, and MCP servers for an agent harness.',
 		creator: '@nzoishie',
 		images: ['/og-image.jpg'],
 	},
@@ -79,7 +79,7 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className="scroll-smooth">
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
 		</html>
 	);
