@@ -4,14 +4,15 @@ import { motion } from 'framer-motion';
 
 const projects = [
 	{
-		label: 'Applied AI',
-		labelClass: 'text-blue-300',
-		borderClass: 'border-blue-900',
-		title: 'AI-Powered Note-Taking App',
+		label: 'Agentic AI',
+		labelClass: 'text-teal-300',
+		borderClass: 'border-teal-900',
+		title: 'Pitch Desk',
 		summary:
-			'A note-taking app that uses Google’s Gemini API to summarize meetings and extract action items from transcripts in real time.',
-		stack: 'Gemini API, Streamlit, Python',
-		highlight: 'Demonstrated at multiple conferences as a practical way to put an LLM inside a productivity tool.',
+			'A local agent for indie-game outreach. It reads a game press kit, looks up public YouTube channels and publisher guidelines, then writes a short list of fit recommendations and a draft pitch for each one. A person reviews every draft before anything is sent.',
+		stack: 'Python, MCP, Gemini, YouTube Data API',
+		highlight:
+			'The model only chooses the next tool call. The harness owns the loop, a hard step limit, and a JSON trace. A grounding check fails the run when a draft cites a video id that never appeared in a tool result, and the agent never emails anyone.',
 	},
 	{
 		label: 'Developer tools',
@@ -58,7 +59,7 @@ export default function PersonalProjectsSection() {
 					Projects
 				</motion.h2>
 				<p className="mx-auto mb-12 max-w-2xl text-center text-gray-400">
-					Applied AI and developer tools, plus the visualization and research work behind them.
+					A local outreach agent, plus developer tools and earlier research.
 				</p>
 
 				<div className="space-y-6">

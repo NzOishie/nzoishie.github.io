@@ -38,14 +38,19 @@ export default function ExperienceSection() {
 						<p className="mb-4 mt-1 text-sm text-gray-400">May 2022 – Present</p>
 						<ul className="list-disc list-inside space-y-2 text-base text-gray-300">
 							<li>
-								Develop high-performance tools for Electronic Design Automation using Python and C++, focusing on parsing, simulation, and visualization of large-scale circuit design data.
+								Develop high-performance Electronic Design Automation (EDA) tools using Python and C++, focusing on parsing, simulation, and visualization of large-scale circuit design data.
 							</li>
-							<li>Contributed to scalable architecture and core algorithm enhancements that improved performance and maintainability.</li>
-							<li>Build netlisting and data visualization for Solido Design Environment in Python, C++, and Cadence SKILL.</li>
-							<li>Write the API system and API server so users can use the product.</li>
-							<li>Build Model Context Protocol (MCP) servers that expose those APIs to an agent harness.</li>
 							<li>
-								Mentor newly hired developers and interns on Solido Design Environment, from onboarding through the codebase, reviews, and day-to-day engineering practice.
+								Resolved 300+ engineering issues across the product, delivering bug fixes, enhancements, and improvements to core algorithms and software architecture.
+							</li>
+							<li>
+								Designed and implemented API systems and an API server for Solido Design Environment, enabling external programmatic access to product capabilities.
+							</li>
+							<li>
+								Built Model Context Protocol (MCP) servers to expose product APIs to AI agent harnesses, enabling agent-driven interactions with EDA tools.
+							</li>
+							<li>
+								Mentor newly hired developers and interns through onboarding, codebase walkthroughs, code reviews, and day-to-day engineering practices.
 							</li>
 						</ul>
 					</motion.div>
