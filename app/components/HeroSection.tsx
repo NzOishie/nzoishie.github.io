@@ -87,7 +87,7 @@ export default function HeroSection() {
 						<span className="rounded-full bg-purple-500/10 px-3 py-1.5 text-xs text-purple-400 md:px-4 md:py-2 md:text-sm">Python</span>
 						<span className="rounded-full bg-teal-500/10 px-3 py-1.5 text-xs text-teal-400 md:px-4 md:py-2 md:text-sm">C++</span>
 						<span className="rounded-full bg-blue-500/10 px-3 py-1.5 text-xs text-blue-400 md:px-4 md:py-2 md:text-sm">Applied AI</span>
-						<span className="rounded-full bg-purple-500/10 px-3 py-1.5 text-xs text-purple-400 md:px-4 md:py-2 md:text-sm">Systems</span>
+						<span className="rounded-full bg-purple-500/10 px-3 py-1.5 text-xs text-purple-400 md:px-4 md:py-2 md:text-sm">Agentic AI</span>
 					</div>
 				</motion.div>
 

@@ -89,7 +89,7 @@ export default function ContactSection() {
     					It is <b>our choices</b>, that show what we truly are, far more than <b>our abilities.</b>
     					<br />
     					<span className="inline-block align-baseline bg-gradient-to-r from-purple-400 via-blue-400 to-teal-400 bg-clip-text text-transparent  md:text-sm ml-2">
-       						 — J.K. Rowling
+       						 — Albus Dumbledore
     					</span>
 					</p>
 				</motion.div>
