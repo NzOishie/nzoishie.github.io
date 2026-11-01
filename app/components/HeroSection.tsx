@@ -28,7 +28,7 @@ const focuses = [
 
 export default function HeroSection() {
 	return (
-		<section id="top" className="relative min-h-screen overflow-hidden pt-20">
+		<section id="top" className="relative min-h-screen overflow-hidden pt-24 min-[360px]:pt-16 min-[450px]:pt-32 sm:pt-20">
 			<div className="absolute inset-0">
 				<div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10" />
 			</div>

@@ -11,5 +11,11 @@ body {
 }
 
 section[id] {
-	scroll-margin-top: 6rem;
+	scroll-margin-top: 8rem;
+}
+
+@media (min-width: 640px) {
+	section[id] {
+		scroll-margin-top: 6rem;
+	}
 }
